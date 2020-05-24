@@ -32,6 +32,11 @@ zz
 :NERDTree > use file system tree
 
 
+# Vim for c++
+ctrl + ] # goto definition
+gd # goto local declaration
+gD # goto global declaration
+
 
 
 ### =============================================== ###
