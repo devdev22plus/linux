@@ -6,6 +6,15 @@ filetype off
 
 
 
+" --------------------------------------
+"  Automatic installation of Vundle, if it's not available
+" --------------------------------------
+if empty(glob('~/.vim/bundle/Vundle.vim'))
+  silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+" --------------------------------------
+
 
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -19,30 +28,6 @@ Plugin 'preservim/nerdtree'
 call vundle#end()
 
 filetype plugin indent on
-
-
-" for auto start NERDTree on start vim
-"autocmd vimenter * NERDTree
-
-
-Plugin 'christoomey/vim-tmux-navigator'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -78,7 +63,6 @@ endif
 " and syntax on from your .vimrc as they are automatically handled by
 " plug#begin() and plug#end()
 "-----------------------------------------
-
 
 
 
