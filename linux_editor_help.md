@@ -1,12 +1,12 @@
 
 
-### Hot To use Vim for me
-# move by word
+# Hot To use Vim for me
+### move by word
 W move forward
 B move backward
 
 
-# move by line
+### move by line
 ^ for start line
 $ for end line
 
@@ -17,48 +17,48 @@ $ for end line
 
 
 ### =============================================== ###
-### How To use Tmux for me
+# How To use Tmux for me
 
-# Install first for Tmux
+### Install first for Tmux
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 
-# Tmux command
+### Tmux command
 tmux source ~/.tmux.conf
 
 
-# binding-key
+### binding-key
 prefix key: ctrl+b -> released
 
 
 
-# move pane
+### move pane
 prefix key -> [ or ]
 
-# change current pane
+### change current pane
 prefix key -> arrow
 
 
-# new pane horizontal
+### new pane horizontal
 prefix key -> "
 
-# new pane verticle
+### new pane verticle
 prefix key -> %
 
 
-# join pane
+### join pane
 join-pane -s :number of pane
 
-# break pane
+### break pane
 break-pane -s :number of pane
 
-# change layout pane
+### change layout pane
 prefix key -> space bar
 
-# resize pane
+### resize pane
 prefix key press + arrow
 
-# copy selection #
+### copy selection #
 prefix key -> [ # for selection mode
 ctrl + space bar # for start selection
 alt + w # for copy
