@@ -17,6 +17,19 @@ endif
 
 
 
+" --------------------------------------
+"  Automatic installation of NERDTree, if it's not available
+" --------------------------------------
+if empty(glob('~/.vim/bundle/nerdtree'))
+  silent !git clone https://github.com/preservim/nerdtree.git ~/.vim/bundle/nerdtree
+  " autocmd vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+" --------------------------------------
+
+
+
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
