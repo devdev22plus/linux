@@ -1,6 +1,5 @@
-
-
 # Hot To use Vim for me
+
 ### move by word
 W move forward
 B move backward
@@ -11,7 +10,23 @@ B move backward
 $ for end line
 
 
+### change current pane
+ctrl + w > arrow
 
+### copy
+ctrl + d > cut
+
+### past
+p
+
+### command
+:tabs show all tab session
+:tabn next tab
+
+
+
+### command plugin
+:NERDTree > use file system tree
 
 
 
