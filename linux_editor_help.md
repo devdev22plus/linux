@@ -19,6 +19,9 @@ ctrl + d > cut
 ### past
 p
 
+### center of screen
+zz
+
 ### command
 :tabs show all tab session
 :tabn next tab
@@ -72,6 +75,11 @@ prefix key -> space bar
 
 ### resize pane
 prefix key press + arrow
+
+
+### show all pane
+prefix key -> w
+
 
 ### copy selection #
 prefix key -> [ # for selection mode
