@@ -1,0 +1,84 @@
+syntax on
+set number
+set nocompatible
+set encoding=utf-8
+filetype off
+
+
+
+
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'git://git.wincent.com/command-t.git'
+"Plugin 'file:///home/gmarik/path/to/plugin'
+Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plugin 'preservim/nerdtree'
+call vundle#end()
+
+filetype plugin indent on
+
+
+" for auto start NERDTree on start vim
+"autocmd vimenter * NERDTree
+
+
+Plugin 'christoomey/vim-tmux-navigator'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+" ----------------------------------------
+" Automatic installation of vim-plug, if it's not available
+" ----------------------------------------
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+"-----------------------------------------
+
+"-----------------------------------------
+" Automatically install missing plugins on startup
+"-----------------------------------------
+autocmd VimEnter *
+      \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+      \|   PlugInstall --sync | q
+      \| endif
+"-----------------------------------------
+
+"-----------------------------------------
+" Plugins
+"-----------------------------------------
+silent! if plug#begin('~/.vim/plugged')
+Plug 'w0rp/ale'                 " linting plugin
+Plug 'morhetz/gruvbox'          " vim gruvbox color scheme
+call plug#end()
+endif
+" vim-plug does not require any extra statement other than plug#begin()
+" and plug#end(). You can remove filetype off, filetype plugin indent on
+" and syntax on from your .vimrc as they are automatically handled by
+" plug#begin() and plug#end()
+"-----------------------------------------
+
+
+
+
