@@ -5,6 +5,21 @@ set encoding=utf-8
 filetype off
 
 
+" this is example binding key
+map <F2> :ls<CR>
+
+
+"map <silent> ws <F3> :vim <cword> * | cw
+"map <F3> :vim <cword> * \| cw<CR>
+map <silent> <F3> :vim <cword> * \| cw
+
+map <silent> <C-T> :NERDTree <CR>
+
+" binding change insert to end of line
+" ctrl + L
+map <C-l> <Esc>$a
+
+
 
 " --------------------------------------
 "  Automatic installation of Vundle, if it's not available
@@ -38,10 +53,11 @@ Plugin 'git://git.wincent.com/command-t.git'
 "Plugin 'file:///home/gmarik/path/to/plugin'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'preservim/nerdtree'
+"Plugin 'skywind3000/vim-preview'
+"Plugin 'ronakg/quickr-preview.vim'
 call vundle#end()
 
 filetype plugin indent on
-
 
 
 " ----------------------------------------
