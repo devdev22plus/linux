@@ -8,6 +8,7 @@ filetype off
 " this is example binding key
 map <F2> :ls<CR>
 
+map <silent> <F5> :source ~/.vimrc
 
 "map <silent> ws <F3> :vim <cword> * | cw
 "map <F3> :vim <cword> * \| cw<CR>
@@ -18,6 +19,25 @@ map <silent> <C-T> :NERDTree <CR>
 " binding change insert to end of line
 " ctrl + L
 map <C-l> <Esc>$a
+
+
+" goto tab number
+noremap <leader>1 1gt
+noremap <leader>2 2gt
+noremap <leader>3 3gt
+noremap <leader>4 4gt
+noremap <leader>5 5gt
+noremap <leader>6 6gt
+noremap <leader>7 7gt
+noremap <leader>8 8gt
+noremap <leader>9 9gt
+noremap <leader>0 :tablast<cr>
+
+
+
+
+"nnoremap \ :grep -F <SPACE>
+
 
 
 
