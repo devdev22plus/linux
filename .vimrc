@@ -5,6 +5,9 @@ set encoding=utf-8
 filetype off
 
 
+set autoread
+
+
 " this is example binding key
 map <F2> :ls<CR>
 
@@ -14,7 +17,9 @@ map <silent> <F5> :source ~/.vimrc
 "map <F3> :vim <cword> * \| cw<CR>
 map <silent> <F3> :vim <cword> * \| cw
 
-map <silent> <C-T> :NERDTree <CR>
+"map <silent> <C-T> :NERDTree <CR>
+nnoremap <silent> <expr> <C-T> g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : bufexists(expand('%')) ? "\:NERDTreeFind<CR>" : "\:NERDTree<CR>"
+
 
 " binding change insert to end of line
 " ctrl + L
