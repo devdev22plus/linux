@@ -28,7 +28,14 @@ sysctl -w net.ipv4.ip_forward=1
 sed -i -e 's/#Port 22/Port 42639/g' /etc/ssh/sshd_config
 
 
+
+curl -k https://raw.githubusercontent.com/devdev22plus/linux/master/iptables_setup/iptables < iptables
+
+
+
 iptables-restore < iptables
 service iptables save
+
+
 
 
