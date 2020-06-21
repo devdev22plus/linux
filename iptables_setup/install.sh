@@ -37,5 +37,7 @@ iptables-restore < iptables
 service iptables save
 
 
+reboot now
+
 
 
