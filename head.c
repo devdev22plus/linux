@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+//mangle
 
 class TestClass
 {
@@ -17,4 +18,9 @@ public:
 		printf("TestClass::Printf();");
 	}
 };
+
+
+void main()
+{
+}
 

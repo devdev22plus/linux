@@ -4,7 +4,6 @@ set nocompatible
 set encoding=utf-8
 filetype off
 
-
 set autoread
 
 
@@ -13,9 +12,6 @@ map <F2> :ls<CR>
 
 map <silent> <F5> :source ~/.vimrc
 
-"map <silent> ws <F3> :vim <cword> * | cw
-"map <F3> :vim <cword> * \| cw<CR>
-map <silent> <F3> :vim <cword> * \| cw
 
 "map <silent> <C-T> :NERDTree <CR>
 nnoremap <silent> <expr> <C-T> g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : bufexists(expand('%')) ? "\:NERDTreeFind<CR>" : "\:NERDTree<CR>"
@@ -24,6 +20,17 @@ nnoremap <silent> <expr> <C-T> g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : buf
 " binding change insert to end of line
 " ctrl + L
 map <C-l> <Esc>$a
+
+" shift - f for open copen/cope
+map <silent> <S-F> :cope<CR>
+
+" ctrl - f for find current word in current edit file
+map <silent> <C-f> :execute 'vimgrep /'.expand('<cword>').'/gj '.expand('%') \| copen<CR>
+
+" ff for find current word all files in root dir
+"map <silent> ff :execute 'vimgrep /'.expand('<cword>').'/gj '.expand('**/*.*') \| copen<CR>
+map <silent> ff :execute 'vimgrep /'.expand('<cword>').'/gj **.* **/*' \| copen<CR>
+"map <silent> ff :execute 'grep -R --exclude-dir={.git,node_modules} '.expand('<cword>').' . '<CR> \| copen<CR>
 
 
 " goto tab number
