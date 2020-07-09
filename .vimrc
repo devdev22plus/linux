@@ -10,7 +10,7 @@ set autoread
 " this is example binding key
 map <F2> :ls<CR>
 
-map <silent> <F5> :source ~/.vimrc
+map <silent> <F5> :source ~/.vimrc<CR>
 
 
 "map <silent> <C-T> :NERDTree <CR>
@@ -31,6 +31,30 @@ map <silent> <C-f> :execute 'vimgrep /'.expand('<cword>').'/gj '.expand('%') \| 
 "map <silent> ff :execute 'vimgrep /'.expand('<cword>').'/gj '.expand('**/*.*') \| copen<CR>
 map <silent> ff :execute 'vimgrep /'.expand('<cword>').'/gj **.* **/*' \| copen<CR>
 "map <silent> ff :execute 'grep -R --exclude-dir={.git,node_modules} '.expand('<cword>').' . '<CR> \| copen<CR>
+
+" remap key for vistual block
+nnoremap vv <c-v> " remap `vv` to `Ctrl-v`
+
+"
+"nnoremap <C-N> :norm i
+"nnoremap <C-M> :norm x
+"
+
+"
+"augroup commenting_blocks_of_code
+"	autocmd!
+"	autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
+"	autocmd FileType sh,ruby,python   let b:comment_leader = '# '
+"	autocmd FileType conf,fstab       let b:comment_leader = '# '
+"	autocmd FileType tex              let b:comment_leader = '%'
+"	autocmd FileType mail             let b:comment_leader = '> '
+"	autocmd FileType vim              let b:comment_leader = '" '
+"augroup END
+""noremap <silent> vb :<C-B>silent<C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
+"noremap <silent> vv :<C-B>silent<C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
+
+
+
 
 
 " goto tab number
