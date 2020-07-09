@@ -1,4 +1,9 @@
-# Hot To use Vim for me
+### Install vim plugin
+if use wsl will have ddos convert to unix all file if file in plugin have error about end of line
+use this command can help about convert file from ddos to unix ":w ++ff=unix" write can change in one command
+
+
+# How To use Vim for me
 
 ### move by word
 W move forward

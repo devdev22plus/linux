@@ -80,13 +80,18 @@ endif
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'git://git.wincent.com/command-t.git'
+"Plugin 'tpope/vim-fugitive'
+"Plugin 'git://git.wincent.com/command-t.git'
 "Plugin 'file:///home/gmarik/path/to/plugin'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'preservim/nerdtree'
 "Plugin 'skywind3000/vim-preview'
 "Plugin 'ronakg/quickr-preview.vim'
+" supertab when install if use wsl will error, fix to ":w ++ff=unix" first
+Plugin 'ervandew/supertab'
+Plugin 'valloric/youcompleteme'
+Plugin 'thosakwe/vim-flutter'
+Plugin 'dart-lang/dart-vim-plugin'
 call vundle#end()
 
 filetype plugin indent on
@@ -124,6 +129,17 @@ endif
 " and syntax on from your .vimrc as they are automatically handled by
 " plug#begin() and plug#end()
 "-----------------------------------------
+
+let g:ycm_add_preview_to_completeopt = 0
+let g:ycm_autoclose_preview_window_after_completion = 0
+let g:ycm_autoclose_preview_window_after_insertion = 0
+
+set completeopt-=preview
+
+
+nnoremap gl :YcmCompleter GoToDeclaration<CR>
+nnoremap gc :YcmCompleter GetDoc<CR>
+
 
 
 
