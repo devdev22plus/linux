@@ -5,9 +5,6 @@ set encoding=utf-8
 filetype off
 
 
-" disable auto insert comment
-set formatoptions-=cro
-
 
 set hlsearch
 hi Search ctermbg=DarkRed
@@ -181,6 +178,15 @@ endif
 " and syntax on from your .vimrc as they are automatically handled by
 " plug#begin() and plug#end()
 "-----------------------------------------
+
+
+
+
+" disable auto insert comment
+set formatoptions-=cro
+
+
+
 
 let g:ycm_add_preview_to_completeopt = 0
 let g:ycm_autoclose_preview_window_after_completion = 0
