@@ -4,7 +4,29 @@ set nocompatible
 set encoding=utf-8
 filetype off
 
+set hlsearch
+hi Search ctermbg=DarkRed
+hi Search ctermfg=Black
+
 set autoread
+
+" for hightlight search word
+set hls
+
+
+" for highlight current line
+set cursorline
+hi cursorline cterm=none term=none
+autocmd WinEnter * setlocal cursorline
+autocmd WinLeave * setlocal nocursorline
+highlight CursorLine guibg=#303000 ctermbg=234
+
+
+
+
+set ignorecase
+" set noignorecase
+set smartcase
 
 
 " this is example binding key
@@ -116,6 +138,7 @@ Plugin 'ervandew/supertab'
 Plugin 'valloric/youcompleteme'
 Plugin 'thosakwe/vim-flutter'
 Plugin 'dart-lang/dart-vim-plugin'
+Plugin 'tpope/vim-commentary'
 call vundle#end()
 
 filetype plugin indent on
@@ -163,6 +186,10 @@ set completeopt-=preview
 
 nnoremap gl :YcmCompleter GoToDeclaration<CR>
 nnoremap gc :YcmCompleter GetDoc<CR>
+
+
+
+noremap vvv :Commentary<cr>
 
 
 
