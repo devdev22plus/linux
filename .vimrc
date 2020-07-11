@@ -4,6 +4,11 @@ set nocompatible
 set encoding=utf-8
 filetype off
 
+
+" disable auto insert comment
+set formatoptions-=cro
+
+
 set hlsearch
 hi Search ctermbg=DarkRed
 hi Search ctermfg=Black
