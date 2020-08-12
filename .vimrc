@@ -124,6 +124,19 @@ endif
 
 
 
+" set clipboard+=unnamedplus
+
+" disable auto indening when copy text from clipboard then paste to vim
+set paste
+" set nopaste
+" set autoindent
+set smartindent
+" set cindent
+
+" set pastetoggle=<F4>
+
+
+
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -137,13 +150,22 @@ Plugin 'preservim/nerdtree'
 "Plugin 'ronakg/quickr-preview.vim'
 " supertab when install if use wsl will error, fix to ":w ++ff=unix" first
 Plugin 'ervandew/supertab'
-Plugin 'valloric/youcompleteme'
+" Plugin 'valloric/youcompleteme'
 Plugin 'thosakwe/vim-flutter'
 Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'tpope/vim-commentary'
+" Plugin 'Chiel92/vim-autoformat'
+" Plugin 'sheerun/vim-polyglot'
 call vundle#end()
 
+
+
+
+filetype on
+filetype indent on
 filetype plugin indent on
+
+
 
 
 " ----------------------------------------
@@ -181,22 +203,21 @@ endif
 
 
 
-
 " disable auto insert comment
 set formatoptions-=cro
 
 
 
 
-let g:ycm_add_preview_to_completeopt = 0
-let g:ycm_autoclose_preview_window_after_completion = 0
-let g:ycm_autoclose_preview_window_after_insertion = 0
+" let g:ycm_add_preview_to_completeopt = 0
+" let g:ycm_autoclose_preview_window_after_completion = 0
+" let g:ycm_autoclose_preview_window_after_insertion = 0
 
-set completeopt-=preview
+" set completeopt-=preview
 
 
-nnoremap gl :YcmCompleter GoToDeclaration<CR>
-nnoremap gc :YcmCompleter GetDoc<CR>
+" nnoremap gl :YcmCompleter GoToDeclaration<CR>
+" nnoremap gc :YcmCompleter GetDoc<CR>
 
 
 
