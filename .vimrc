@@ -156,6 +156,7 @@ Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'tpope/vim-commentary'
 " Plugin 'Chiel92/vim-autoformat'
 " Plugin 'sheerun/vim-polyglot'
+Plugin 'junegunn/vim-easy-align'
 Plugin 'aserebryakov/vim-todo-lists'
 call vundle#end()
 
