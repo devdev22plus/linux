@@ -1,5 +1,11 @@
 # Help for linux for me
 
+# tmux help
+break-pane shortcut key by default is CTRL-B -> !
+
+tmux change pane display CTRL-B -> 0-9
+
+
 # command help
 
 :set ff=unix
