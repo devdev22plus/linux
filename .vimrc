@@ -2,15 +2,21 @@ syntax on
 set number
 set nocompatible
 set encoding=utf-8
+set path+=**
+set mouse=a
+set noswapfile
 filetype off
 
 
+set wildignore+=tags,_bin/**,obj/**,bin/**,node_modules/**
 
 set hlsearch
 hi Search ctermbg=DarkRed
 hi Search ctermfg=Black
 
 set autoread
+
+set backspace=indent,eol,start
 
 " for hightlight search word
 set hls
@@ -34,6 +40,11 @@ set smartcase
 " this is example binding key
 map <F2> :ls<CR>
 
+
+" swap layout window
+map <F3> <C-w>K<CR>
+map <F4> <C-w>H<CR>
+
 map <silent> <F5> :source ~/.vimrc<CR>
 
 
@@ -46,15 +57,27 @@ nnoremap <silent> <expr> <C-T> g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : buf
 map <C-l> <Esc>$a
 
 " shift - f for open copen/cope
-map <silent> <S-F> :cope<CR>
+map <silent> <S-F>e :cope<CR>
 
 " ctrl - f for find current word in current edit file
 map <silent> <C-f> :execute 'vimgrep /'.expand('<cword>').'/gj '.expand('%') \| copen<CR>
 
 " ff for find current word all files in root dir
 "map <silent> ff :execute 'vimgrep /'.expand('<cword>').'/gj '.expand('**/*.*') \| copen<CR>
-map <silent> ff :execute 'vimgrep /'.expand('<cword>').'/gj **.* **/*' \| copen<CR>
+"map <silent> ff :execute 'vimgrep /'.expand('<cword>').'/gj **.* **/*' \| copen<CR>
 "map <silent> ff :execute 'grep -R --exclude-dir={.git,node_modules} '.expand('<cword>').' . '<CR> \| copen<CR>
+
+
+" work before change to below
+" nmap ff<CR> :execute 'vimgrep /'.expand('<cword>').'/gj **.* **/*' \| copen<CR>
+" nmap <leader>ff :execute 'vimgrep /'.expand('<cword>').'/gj **.* **/*' \| copen<CR>
+" this will search all file and folder and sub folder
+" nmap ff :execute 'vimgrep /'.expand(input("search: ")).'/gj **.* **/*' \| copen<CR>
+nmap <leader><S-F> :execute 'vimgrep /'.expand(input("file-search: ", expand('<cword>'))).'/gj **.* **/*' \| copen<CR>
+nmap <leader>ff :execute 'vimgrep /'.expand(input("file-search: ")).'/gj **.* **/*' \| copen<CR>
+" change to search in currrent file
+nmap <S-F>f :execute 'vimgrep /'.expand(input("search: ", expand('<cword>'))).'/ %' \| copen<CR>
+nmap ff :execute 'vimgrep /'.expand(input("search: ")).'/ %' \| copen<CR>
 
 " remap key for vistual block
 nnoremap vv <c-v> " remap `vv` to `Ctrl-v`
@@ -127,7 +150,7 @@ endif
 " set clipboard+=unnamedplus
 
 " disable auto indening when copy text from clipboard then paste to vim
-set paste
+" set paste
 " set nopaste
 " set autoindent
 set smartindent
@@ -151,13 +174,17 @@ Plugin 'preservim/nerdtree'
 " supertab when install if use wsl will error, fix to ":w ++ff=unix" first
 Plugin 'ervandew/supertab'
 " Plugin 'valloric/youcompleteme'
-Plugin 'thosakwe/vim-flutter'
-Plugin 'dart-lang/dart-vim-plugin'
+" Plugin 'thosakwe/vim-flutter'
+" Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'tpope/vim-commentary'
 " Plugin 'Chiel92/vim-autoformat'
 " Plugin 'sheerun/vim-polyglot'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'aserebryakov/vim-todo-lists'
+" Plugin 'samoshkin/vim-find-files'
+" Plugin 'eugen0329/vim-esearch'
+" Plugin 'wincent/ferret'
+Plugin 'tpope/vim-fugitive'
 call vundle#end()
 
 

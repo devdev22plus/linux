@@ -17,4 +17,9 @@ https://vimawesome.com/plugin/vim-easy-align
 # learn this again, forget how to use this too
 https://github.com/aserebryakov/vim-todo-lists
 
+# if have a problem in download plugin from Github ending line
+# should use this first before install plugin
+git config --global core.autocrlf false
+
+
 

@@ -1,0 +1,13 @@
+#for test
+#
+*.key
+*.pub
+
+#exclude
+notme/*
+notme/*/*
+
+#include not except exclude
+!notme/*/
+!notme/*/uidata/
+
