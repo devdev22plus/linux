@@ -3,6 +3,10 @@
 *.key
 *.pub
 
+tags
+
+
+
 #exclude
 notme/*
 notme/*/*
