@@ -5,6 +5,7 @@ set encoding=utf-8
 set path+=**
 set mouse=a
 set noswapfile
+set cursorcolumn
 filetype off
 
 
