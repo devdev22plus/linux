@@ -9,6 +9,25 @@ set cursorcolumn
 filetype off
 
 
+" test set cursor
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+" set ttimeout
+" set ttimeoutlen=1
+" set listchars=tab:>-,trail:~,extends:>,precedes:<,space:.
+" set ttyfast
+
+
+" work on windows cursor will set to bold
+" let &t_ti.="\e[1 q"
+" let &t_SI.="\e[5 q"
+" let &t_EI.="\e[1 q"
+" let &t_te.="\e[0 q"
+
+
+
+
 set wildignore+=tags,_bin/**,obj/**,bin/**,node_modules/**
 
 set hlsearch
@@ -29,6 +48,7 @@ hi cursorline cterm=none term=none
 autocmd WinEnter * setlocal cursorline
 autocmd WinLeave * setlocal nocursorline
 highlight CursorLine guibg=#303000 ctermbg=234
+highlight CursorColumn ctermbg=darkgray
 
 
 
