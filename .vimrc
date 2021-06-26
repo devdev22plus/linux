@@ -208,6 +208,7 @@ Plugin 'aserebryakov/vim-todo-lists'
 " Plugin 'eugen0329/vim-esearch'
 " Plugin 'wincent/ferret'
 Plugin 'tpope/vim-fugitive'
+Plugin 'terryma/vim-multiple-cursors'
 call vundle#end()
 
 

@@ -1,5 +1,8 @@
 # Help for linux for me
 
+# help for plugin vim
+multi cursor >> https://github.com/terryma/vim-multiple-cursors#installation
+
 # tmux help
 break-pane shortcut key by default is CTRL-B -> !
 
