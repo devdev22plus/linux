@@ -61,6 +61,8 @@ set smartcase
 " this is example binding key
 map <F2> :ls<CR>
 
+map <silent> <C-k> :syntax off<CR>
+
 
 " swap layout window
 map <F3> <C-w>K<CR>
